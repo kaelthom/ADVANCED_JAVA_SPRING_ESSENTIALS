@@ -1,6 +1,5 @@
 package com.advancedjava.springtraining.model;
 
-import com.advancedjava.springtraining.annotation.MyAnnotation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -38,7 +37,6 @@ public class PianoPlayer implements InstrumentPlayer {
     }
 
     @Override
-    @MyAnnotation
     public void play() {
         instrument.play();
     }
