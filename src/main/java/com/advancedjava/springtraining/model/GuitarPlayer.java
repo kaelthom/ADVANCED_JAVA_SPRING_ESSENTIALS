@@ -5,10 +5,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component(value = "guitarplayer")
-public class GuitarPlayer implements InstrumentPlayer{
+public class GuitarPlayer implements InstrumentPlayer {
 
     @Autowired
-    @Qualifier(value= "ukulele")
+    @Qualifier(value = "ukulele")
     private IInstrument instrument;
     private String name;
 
