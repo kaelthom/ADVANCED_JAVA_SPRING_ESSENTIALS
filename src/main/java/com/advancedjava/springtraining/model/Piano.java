@@ -3,14 +3,14 @@ package com.advancedjava.springtraining.model;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Guitar implements IInstrument {
+public class Piano implements IInstrument {
 
     private String name;
 
-    public Guitar() {
+    public Piano() {
     }
 
-    public Guitar(String name) {
+    public Piano(String name) {
         this.name = name;
     }
 
@@ -20,7 +20,7 @@ public class Guitar implements IInstrument {
 
     @Override
     public String toString() {
-        return "Guitar{" +
+        return "Piano{" +
                 "name='" + name + '\'' +
                 '}';
     }

@@ -4,25 +4,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component(value = "guitarplayer")
-public class GuitarPlayer implements InstrumentPlayer{
+@Component
+public class PianoPlayer implements InstrumentPlayer{
 
     @Autowired
-    @Qualifier(value= "ukulele")
+    @Qualifier(value="piano")
     private IInstrument instrument;
     private String name;
 
-    public GuitarPlayer() {
+    public PianoPlayer() {
     }
 
-    public GuitarPlayer(IInstrument instrument, String name) {
+    public PianoPlayer(IInstrument instrument, String name) {
         this.instrument = instrument;
         this.name = name;
     }
 
     @Override
     public String toString() {
-        return "GuitarPlayer{" +
+        return "PianoPlayer{" +
                 "instrument=" + instrument +
                 ", name='" + name + '\'' +
                 '}';

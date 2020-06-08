@@ -1,14 +1,18 @@
 import com.advancedjava.springtraining.model.GuitarPlayer;
+import com.advancedjava.springtraining.model.InstrumentPlayer;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:application-context.xml");
 
-        GuitarPlayer guitarPlayer = context.getBean("guitarplayerbean", GuitarPlayer.class);
-        GuitarPlayer mark = context.getBean("guitar-player-bean-with-name", GuitarPlayer.class);
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("classpath:application-context.xml");
 
-        guitarPlayer.play();
-        System.out.println(mark);
+        Scanner sc = new Scanner(System.in);
+        InstrumentPlayer player = (InstrumentPlayer) context.getBean(sc.nextLine());
+
+        System.out.println(player);
     }
 }
