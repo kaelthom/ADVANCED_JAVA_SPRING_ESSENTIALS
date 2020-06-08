@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="myAspectInterceptor" class="com.advancedjava.springtraining.aspect.MyAspectInterceptor"/>
+    <aop:config>
+        <aop:pointcut id="serviceToStringPointCut"
+                      expression="execution(* com.advancedjava.springtraining.model.*Player.toString(..))"
+        />
+        <aop:aspect id="myAspect" ref="myAspectInterceptor">
+            <aop:before method="interceptToString" pointcut-ref="serviceToStringPointCut"/>
+            <aop:after-returning method="interceptorToStringReturning"
+                                 returning="returnObject" pointcut-ref="serviceToStringPointCut"/>
+        </aop:aspect>
+    </aop:config>
+</beans>
