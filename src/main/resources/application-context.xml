@@ -6,8 +6,8 @@ http://www.springframework.org/schema/aop
 http://www.springframework.org/schema/aop/spring-aop.xsd"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context" >
-    <bean name="guitarbean" class="com.advancedjava.springtraining.Guitar"/>
-    <bean name="guitarplayerbean" class="com.advancedjava.springtraining.GuitarPlayer">
+    <bean id="guitarbean" class="com.advancedjava.springtraining.model.Guitar"/>
+    <bean id="guitarplayerbean" class="com.advancedjava.springtraining.model.GuitarPlayer">
         <property name="guitar" ref="guitarbean"></property>
     </bean>
 </beans>

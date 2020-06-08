@@ -1,4 +1,4 @@
-package com.advancedjava.springtraining;
+package com.advancedjava.springtraining.model;
 
 public class Guitar implements IInstrument {
     public void play() {

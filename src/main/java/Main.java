@@ -1,4 +1,4 @@
-import com.advancedjava.springtraining.GuitarPlayer;
+import com.advancedjava.springtraining.model.GuitarPlayer;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
