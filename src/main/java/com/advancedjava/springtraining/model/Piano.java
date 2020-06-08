@@ -15,7 +15,7 @@ public class Piano implements IInstrument {
     }
 
     public void play() {
-        System.out.println("play guitar");
+        System.out.println("play piano");
     }
 
     @Override
