@@ -13,4 +13,8 @@ public class GuitarPlayer {
     public void setGuitar(IInstrument guitar) {
         this.guitar = guitar;
     }
+
+    public void play() {
+        guitar.play();
+    }
 }

@@ -7,6 +7,6 @@ public class Main {
 
         GuitarPlayer guitarPlayer = context.getBean("guitarplayerbean", GuitarPlayer.class);
 
-        guitarPlayer.getGuitar().play();
+        guitarPlayer.play();
     }
 }
