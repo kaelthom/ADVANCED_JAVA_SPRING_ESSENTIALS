@@ -6,7 +6,9 @@ public class Main {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:application-context.xml");
 
         GuitarPlayer guitarPlayer = context.getBean("guitarplayerbean", GuitarPlayer.class);
+        GuitarPlayer mark = context.getBean("guitar-player-bean-with-name", GuitarPlayer.class);
 
         guitarPlayer.play();
+        System.out.println(mark);
     }
 }

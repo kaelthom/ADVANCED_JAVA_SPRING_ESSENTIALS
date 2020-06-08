@@ -10,4 +10,8 @@ http://www.springframework.org/schema/aop/spring-aop.xsd"
     <bean id="guitarplayerbean" class="com.advancedjava.springtraining.model.GuitarPlayer">
         <property name="guitar" ref="guitarbean"></property>
     </bean>
+    <bean id="guitar-player-bean-with-name" class="com.advancedjava.springtraining.model.GuitarPlayer">
+        <constructor-arg index="0" ref="guitarbean"/>
+        <constructor-arg index="1" value="Knopfler"/>
+    </bean>
 </beans>
